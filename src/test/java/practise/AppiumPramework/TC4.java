@@ -85,4 +85,9 @@ public class TC4 extends base {
 		double amout = Double.parseDouble(value);
 		return amout;
 	}
+	
+	public void testGit()
+	{
+		System.out.println("hello guys");
+	}
 }
