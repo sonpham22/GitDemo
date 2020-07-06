@@ -96,4 +96,9 @@ public class TC4 extends base {
 	{
 		System.out.println("Develop branch");
 	}
+	
+	public void testBranch2()
+	{
+		System.out.println("Develop branch2");
+	}
 }
