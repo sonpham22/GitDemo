@@ -53,13 +53,13 @@ public class Base {
 	
 	public static void startEmulator() throws IOException, InterruptedException
 	{
-		Runtime.getRuntime().exec(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\startEmulator.bat");
+		Runtime.getRuntime().exec(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\startEmulator.bat");
 		Thread.sleep(6000);
 	}
 
 	public static AndroidDriver<AndroidElement> Capabilities(String appName) throws IOException, InterruptedException
 	{
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\practise\\AppiumPramework\\global.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Framework\\Properties");
 		Properties prop = new Properties();
 		prop.load(fis);
 		
