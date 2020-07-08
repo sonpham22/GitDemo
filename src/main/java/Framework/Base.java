@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.URL;
 import java.util.Properties;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -20,6 +19,7 @@ public class Base {
 	public static AndroidDriver<AndroidElement> driver;
 	
 	public static AppiumDriverLocalService service;
+	
 	public AppiumDriverLocalService startServer()
 	{
 		boolean flag = checkIfServerIsRunning(4723);
@@ -57,9 +57,8 @@ public class Base {
 		Thread.sleep(6000);
 	}
 
-	public static AndroidDriver<AndroidElement> Capabilities(String appName) throws IOException, InterruptedException{
-		// TODO Auto-generated method stub
-		
+	public static AndroidDriver<AndroidElement> Capabilities(String appName) throws IOException, InterruptedException
+	{
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\practise\\AppiumPramework\\global.properties");
 		Properties prop = new Properties();
 		prop.load(fis);
@@ -69,7 +68,6 @@ public class Base {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
-		//String device = (String) prop.get("device");
 		String device = System.getProperty("deviceName");
 		if (device.contains("SON-PHONE"))
 		{
