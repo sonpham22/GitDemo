@@ -1,4 +1,4 @@
-package practise.AppiumPramework;
+package Framework;
 
 /**
  * Hello world!

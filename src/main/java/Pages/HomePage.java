@@ -1,4 +1,4 @@
-package pageObjects;
+package Pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.android.AndroidDriver;

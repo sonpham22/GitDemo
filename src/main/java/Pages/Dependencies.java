@@ -1,4 +1,4 @@
-package pageObjects;
+package Pages;
 
 public class Dependencies {
 

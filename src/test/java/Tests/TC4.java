@@ -1,21 +1,26 @@
-package practise.AppiumPramework;
+package Tests;
 import java.util.concurrent.TimeUnit;
 import static io.appium.java_client.touch.TapOptions.tapOptions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import Framework.Utilities;
+import Framework.Base;
+import Pages.CheckOutPage;
+import Pages.FormPage;
+
 import static io.appium.java_client.touch.offset.ElementOption.element;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import pageObjects.CheckOutPage;
-import pageObjects.FormPage;
+
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import static java.time.Duration.ofSeconds;
 import java.io.IOException;
 
-public class TC4 extends base {
+public class TC4 extends Base {
 	
 	@Test
 	public void totalValidation() throws IOException, InterruptedException

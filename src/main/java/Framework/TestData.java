@@ -1,4 +1,4 @@
-package practise.AppiumPramework;
+package Framework;
 
 import org.testng.annotations.DataProvider;
 

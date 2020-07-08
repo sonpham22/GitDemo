@@ -1,15 +1,18 @@
-package practise.AppiumPramework;
+package Tests;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import Framework.TestData;
+import Framework.Base;
+import Pages.HomePage;
+import Pages.Preferences;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import pageObjects.HomePage;
-import pageObjects.Preferences;
 
-public class AipDemoTest extends base {
+public class AipDemoTest extends Base {
 
 	@Test(dataProvider="InputData", dataProviderClass=TestData.class)
 	public void apiDemo(String input) throws IOException, InterruptedException

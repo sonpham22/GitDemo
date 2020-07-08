@@ -1,4 +1,4 @@
-package practise.AppiumPramework;
+package Framework;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
-public class base {
+public class Base {
 	
 	public static AndroidDriver<AndroidElement> driver;
 	
