@@ -12,8 +12,14 @@ public class Login {
 	
 	public Login(AndroidDriver<AndroidElement> driver) 
 	{
-		// TODO Auto-generated constructor stub
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	}
+	
+	public void LoginWithTheUser(String user, String pass)
+	{
+		EmailTextBox().sendKeys(user);
+		PassWordTextBox().sendKeys(pass);
+		SignInButton().click();
 	}
 
 	@AndroidFindBy(xpath="(//*[@class='android.widget.EditText'])[1]")
@@ -41,6 +47,15 @@ public class Login {
 	{
 		System.out.println("Try to get Sign in button element");
 		return SignInButton;
+	}
+	
+	@AndroidFindBy(xpath="//*[@text='Error: Username or password invalid']")
+	private WebElement ErrorMessage;
+	
+	public WebElement ErrorMessage()
+	{
+		System.out.println("Try to get Error message element");
+		return ErrorMessage;
 	}
 
 }

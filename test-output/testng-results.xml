@@ -1,45 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="107434" started-at="2020-07-02T16:59:01 ICT" finished-at="2020-07-02T17:00:49 ICT">
+  <suite name="Suite" duration-ms="67524" started-at="2020-07-09T17:35:08 ICT" finished-at="2020-07-09T17:36:15 ICT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="107434" started-at="2020-07-02T16:59:01 ICT" finished-at="2020-07-02T17:00:49 ICT">
-      <class name="practise.AppiumPramework.TC4">
-        <test-method status="PASS" signature="killAllNode()[pri:0, instance:practise.AppiumPramework.TC4@87f383f]" name="killAllNode" is-config="true" duration-ms="3018" started-at="2020-07-02T16:59:01 ICT" finished-at="2020-07-02T16:59:04 ICT">
+    <test name="Test" duration-ms="67524" started-at="2020-07-09T17:35:08 ICT" finished-at="2020-07-09T17:36:15 ICT">
+      <class name="Tests.LoginTests">
+        <test-method status="PASS" signature="killAllNodeAndStartServer()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="killAllNodeAndStartServer" is-config="true" duration-ms="3011" started-at="2020-07-09T17:35:08 ICT" finished-at="2020-07-09T17:35:11 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- killAllNode -->
-        <test-method status="PASS" signature="totalValidation()[pri:0, instance:practise.AppiumPramework.TC4@87f383f]" name="totalValidation" duration-ms="45762" started-at="2020-07-02T16:59:04 ICT" finished-at="2020-07-02T16:59:50 ICT">
+        </test-method> <!-- killAllNodeAndStartServer -->
+        <test-method status="PASS" signature="StartServer()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="StartServer" is-config="true" duration-ms="21409" started-at="2020-07-09T17:35:11 ICT" finished-at="2020-07-09T17:35:32 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- totalValidation -->
-      </class> <!-- practise.AppiumPramework.TC4 -->
-      <class name="practise.AppiumPramework.AipDemoTest">
-        <test-method status="PASS" signature="apiDemo(java.lang.String)[pri:0, instance:practise.AppiumPramework.AipDemoTest@4eb7f003]" name="apiDemo" duration-ms="30573" started-at="2020-07-02T16:59:50 ICT" data-provider="InputData" finished-at="2020-07-02T17:00:21 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[hello]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- StartServer -->
+        <test-method status="PASS" signature="LoginWithInValidUser()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="LoginWithInValidUser" duration-ms="11382" started-at="2020-07-09T17:35:32 ICT" finished-at="2020-07-09T17:35:44 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- apiDemo -->
-        <test-method status="PASS" signature="apiDemo(java.lang.String)[pri:0, instance:practise.AppiumPramework.AipDemoTest@4eb7f003]" name="apiDemo" duration-ms="27970" started-at="2020-07-02T17:00:21 ICT" data-provider="InputData" finished-at="2020-07-02T17:00:49 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[fdlfjdklsfj]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- LoginWithInValidUser -->
+        <test-method status="PASS" signature="StartServer()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="StartServer" is-config="true" duration-ms="19226" started-at="2020-07-09T17:35:44 ICT" finished-at="2020-07-09T17:36:03 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- apiDemo -->
-      </class> <!-- practise.AppiumPramework.AipDemoTest -->
+        </test-method> <!-- StartServer -->
+        <test-method status="PASS" signature="LoginWithValidUser()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="LoginWithValidUser" duration-ms="12457" started-at="2020-07-09T17:36:03 ICT" finished-at="2020-07-09T17:36:15 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithValidUser -->
+      </class> <!-- Tests.LoginTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
