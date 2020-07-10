@@ -68,8 +68,8 @@ public class Base {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
-		String device = (String) prop.get("device");
-		//String device = System.getProperty("deviceName");
+		//String device = (String) prop.get("device");
+		String device = System.getProperty("deviceName");
 		if (device.contains("SON-PHONE"))
 		{
 			startEmulator();

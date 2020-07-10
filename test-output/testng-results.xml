@@ -1,32 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="67524" started-at="2020-07-09T17:35:08 ICT" finished-at="2020-07-09T17:36:15 ICT">
+  <suite name="Suite" duration-ms="224433" started-at="2020-07-10T16:21:20 ICT" finished-at="2020-07-10T16:25:04 ICT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="67524" started-at="2020-07-09T17:35:08 ICT" finished-at="2020-07-09T17:36:15 ICT">
+    <test name="Test" duration-ms="224433" started-at="2020-07-10T16:21:20 ICT" finished-at="2020-07-10T16:25:04 ICT">
       <class name="Tests.LoginTests">
-        <test-method status="PASS" signature="killAllNodeAndStartServer()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="killAllNodeAndStartServer" is-config="true" duration-ms="3011" started-at="2020-07-09T17:35:08 ICT" finished-at="2020-07-09T17:35:11 ICT">
+        <test-method status="PASS" signature="KillNode()[pri:0, instance:Tests.LoginTests@87f383f]" name="KillNode" is-config="true" duration-ms="3012" started-at="2020-07-10T16:21:20 ICT" finished-at="2020-07-10T16:21:23 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- killAllNodeAndStartServer -->
-        <test-method status="PASS" signature="StartServer()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="StartServer" is-config="true" duration-ms="21409" started-at="2020-07-09T17:35:11 ICT" finished-at="2020-07-09T17:35:32 ICT">
+        </test-method> <!-- KillNode -->
+        <test-method status="PASS" signature="ReOpenApp()[pri:0, instance:Tests.LoginTests@87f383f]" name="ReOpenApp" is-config="true" duration-ms="21565" started-at="2020-07-10T16:21:23 ICT" finished-at="2020-07-10T16:21:44 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StartServer -->
-        <test-method status="PASS" signature="LoginWithInValidUser()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="LoginWithInValidUser" duration-ms="11382" started-at="2020-07-09T17:35:32 ICT" finished-at="2020-07-09T17:35:44 ICT">
+        </test-method> <!-- ReOpenApp -->
+        <test-method status="PASS" signature="InValidUserAndPass()[pri:0, instance:Tests.LoginTests@87f383f]" name="InValidUserAndPass" duration-ms="10756" started-at="2020-07-10T16:21:44 ICT" finished-at="2020-07-10T16:21:55 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginWithInValidUser -->
-        <test-method status="PASS" signature="StartServer()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="StartServer" is-config="true" duration-ms="19226" started-at="2020-07-09T17:35:44 ICT" finished-at="2020-07-09T17:36:03 ICT">
+        </test-method> <!-- InValidUserAndPass -->
+        <test-method status="PASS" signature="StopServer()[pri:0, instance:Tests.LoginTests@87f383f]" name="StopServer" is-config="true" duration-ms="52" started-at="2020-07-10T16:21:55 ICT" finished-at="2020-07-10T16:21:55 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StartServer -->
-        <test-method status="PASS" signature="LoginWithValidUser()[pri:0, instance:Tests.LoginTests@6121c9d6]" name="LoginWithValidUser" duration-ms="12457" started-at="2020-07-09T17:36:03 ICT" finished-at="2020-07-09T17:36:15 ICT">
+        </test-method> <!-- StopServer -->
+        <test-method status="PASS" signature="ReOpenApp()[pri:0, instance:Tests.LoginTests@87f383f]" name="ReOpenApp" is-config="true" duration-ms="20985" started-at="2020-07-10T16:21:55 ICT" finished-at="2020-07-10T16:22:16 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReOpenApp -->
+        <test-method status="PASS" signature="InvalidPass()[pri:0, instance:Tests.LoginTests@87f383f]" name="InvalidPass" duration-ms="10006" started-at="2020-07-10T16:22:16 ICT" finished-at="2020-07-10T16:22:26 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidPass -->
+        <test-method status="PASS" signature="StopServer()[pri:0, instance:Tests.LoginTests@87f383f]" name="StopServer" is-config="true" duration-ms="52" started-at="2020-07-10T16:22:26 ICT" finished-at="2020-07-10T16:22:26 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopServer -->
+        <test-method status="PASS" signature="ReOpenApp()[pri:0, instance:Tests.LoginTests@87f383f]" name="ReOpenApp" is-config="true" duration-ms="20725" started-at="2020-07-10T16:22:26 ICT" finished-at="2020-07-10T16:22:47 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReOpenApp -->
+        <test-method status="PASS" signature="InvalidUser()[pri:0, instance:Tests.LoginTests@87f383f]" name="InvalidUser" duration-ms="10233" started-at="2020-07-10T16:22:47 ICT" finished-at="2020-07-10T16:22:57 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUser -->
+        <test-method status="PASS" signature="StopServer()[pri:0, instance:Tests.LoginTests@87f383f]" name="StopServer" is-config="true" duration-ms="52" started-at="2020-07-10T16:22:57 ICT" finished-at="2020-07-10T16:22:57 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopServer -->
+        <test-method status="PASS" signature="ReOpenApp()[pri:0, instance:Tests.LoginTests@87f383f]" name="ReOpenApp" is-config="true" duration-ms="21163" started-at="2020-07-10T16:22:57 ICT" finished-at="2020-07-10T16:23:19 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReOpenApp -->
+        <test-method status="PASS" signature="LoginWithValidUser()[pri:0, instance:Tests.LoginTests@87f383f]" name="LoginWithValidUser" duration-ms="11746" started-at="2020-07-10T16:23:19 ICT" finished-at="2020-07-10T16:23:30 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginWithValidUser -->
+        <test-method status="PASS" signature="StopServer()[pri:0, instance:Tests.LoginTests@87f383f]" name="StopServer" is-config="true" duration-ms="50" started-at="2020-07-10T16:23:30 ICT" finished-at="2020-07-10T16:23:30 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopServer -->
+        <test-method status="PASS" signature="ReOpenApp()[pri:0, instance:Tests.LoginTests@87f383f]" name="ReOpenApp" is-config="true" duration-ms="21438" started-at="2020-07-10T16:23:30 ICT" finished-at="2020-07-10T16:23:52 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReOpenApp -->
+        <test-method status="PASS" signature="NotFillOutPass()[pri:0, instance:Tests.LoginTests@87f383f]" name="NotFillOutPass" duration-ms="10330" started-at="2020-07-10T16:23:52 ICT" finished-at="2020-07-10T16:24:02 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotFillOutPass -->
+        <test-method status="PASS" signature="StopServer()[pri:0, instance:Tests.LoginTests@87f383f]" name="StopServer" is-config="true" duration-ms="52" started-at="2020-07-10T16:24:02 ICT" finished-at="2020-07-10T16:24:02 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopServer -->
+        <test-method status="PASS" signature="ReOpenApp()[pri:0, instance:Tests.LoginTests@87f383f]" name="ReOpenApp" is-config="true" duration-ms="21190" started-at="2020-07-10T16:24:02 ICT" finished-at="2020-07-10T16:24:23 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReOpenApp -->
+        <test-method status="PASS" signature="NotFillOutUserName()[pri:0, instance:Tests.LoginTests@87f383f]" name="NotFillOutUserName" duration-ms="10320" started-at="2020-07-10T16:24:23 ICT" finished-at="2020-07-10T16:24:34 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotFillOutUserName -->
+        <test-method status="PASS" signature="StopServer()[pri:0, instance:Tests.LoginTests@87f383f]" name="StopServer" is-config="true" duration-ms="51" started-at="2020-07-10T16:24:34 ICT" finished-at="2020-07-10T16:24:34 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopServer -->
+        <test-method status="PASS" signature="ReOpenApp()[pri:0, instance:Tests.LoginTests@87f383f]" name="ReOpenApp" is-config="true" duration-ms="21053" started-at="2020-07-10T16:24:34 ICT" finished-at="2020-07-10T16:24:55 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReOpenApp -->
+        <test-method status="PASS" signature="NotFillOutUserNameAndPass()[pri:0, instance:Tests.LoginTests@87f383f]" name="NotFillOutUserNameAndPass" duration-ms="9515" started-at="2020-07-10T16:24:55 ICT" finished-at="2020-07-10T16:25:04 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotFillOutUserNameAndPass -->
+        <test-method status="PASS" signature="StopServer()[pri:0, instance:Tests.LoginTests@87f383f]" name="StopServer" is-config="true" duration-ms="51" started-at="2020-07-10T16:25:04 ICT" finished-at="2020-07-10T16:25:04 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StopServer -->
       </class> <!-- Tests.LoginTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

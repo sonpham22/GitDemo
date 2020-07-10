@@ -50,12 +50,48 @@ public class Login {
 	}
 	
 	@AndroidFindBy(xpath="//*[@text='Error: Username or password invalid']")
-	private WebElement ErrorMessage;
+	private WebElement InvalidMessage;
 	
-	public WebElement ErrorMessage()
+	public WebElement InvalidMessage()
 	{
 		System.out.println("Try to get Error message element");
-		return ErrorMessage;
+		return InvalidMessage;
+	}
+	
+	@AndroidFindBy(xpath="//*[@text='Please fill out this field.']")
+	private WebElement FillOutEmailMessage;
+	
+	public WebElement FillOutEmailMessage()
+	{
+		System.out.println("Try to get Fill Out Email Message element");
+		return FillOutEmailMessage;
+	}
+	
+	@AndroidFindBy(xpath="//*[@text='Please fill out this field.']")
+	private WebElement FillOutPassMessage;
+	
+	public WebElement FillOutPassMessage()
+	{
+		System.out.println("Try to get Fill Out Pass Message element");
+		return FillOutPassMessage;
+	}
+	
+	@AndroidFindBy(xpath="//*[@text='Please include an '@' in the email address. 'dsfs' is missing an '@'.']")
+	private WebElement InvalidFormat;
+	
+	public WebElement InvalidFormat()
+	{
+		System.out.println("Try to get Invalid format Message element");
+		return InvalidFormat;
+	}
+	
+	@AndroidFindBy(xpath="//*[contains(@text,'Please enter a part following')]")
+	private WebElement InCompleteFormat;
+	
+	public WebElement InCompleteFormat()
+	{
+		System.out.println("Try to get Incomplete format Message element");
+		return InCompleteFormat;
 	}
 
 }

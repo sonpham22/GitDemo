@@ -9,8 +9,9 @@
     <classes>
       <class name="Tests.LoginTests">
         <methods>
-          <include name="LoginWithValidUser"/>
-          <include name="killAllNodeAndStartServer"/>
+          <include name="InCompleteFormat"/>
+          <include name="ReOpenApp"/>
+          <include name="KillNode"/>
           <include name="StopServer"/>
         </methods>
       </class> <!-- Tests.LoginTests -->

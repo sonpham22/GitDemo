@@ -5,15 +5,16 @@
     <listener class-name="Resources.Listeners"/>
     <listener class-name="Resources.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="test(failed)">
     <classes>
       <class name="Tests.LoginTests">
         <methods>
+          <include name="StartServer"/>
           <include name="LoginWithValidUser"/>
           <include name="killAllNodeAndStartServer"/>
           <include name="StopServer"/>
         </methods>
       </class> <!-- Tests.LoginTests -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

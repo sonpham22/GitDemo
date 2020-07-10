@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,37 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Tests.LoginTests" hash-for-method="LoginWithInValidUser">LoginWithInValidUser</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Tests.LoginTests" hash-for-method="InValidUserAndPass">InValidUserAndPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Tests.LoginTests" hash-for-method="InvalidPass">InvalidPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Tests.LoginTests" hash-for-method="InvalidUser">InvalidUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Tests.LoginTests" hash-for-method="LoginWithValidUser">LoginWithValidUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Tests.LoginTests" hash-for-method="NotFillOutPass">NotFillOutPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Tests.LoginTests" hash-for-method="NotFillOutUserName">NotFillOutUserName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Tests.LoginTests" hash-for-method="NotFillOutUserNameAndPass">NotFillOutUserNameAndPass</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -132,9 +157,23 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginWithInValidUser">
-                  </a> <!-- LoginWithInValidUser -->
-                  <span class="method-name">LoginWithInValidUser</span>
+                  <a name="InValidUserAndPass">
+                  </a> <!-- InValidUserAndPass -->
+                  <span class="method-name">InValidUserAndPass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidPass">
+                  </a> <!-- InvalidPass -->
+                  <span class="method-name">InvalidPass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidUser">
+                  </a> <!-- InvalidUser -->
+                  <span class="method-name">InvalidUser</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -142,6 +181,27 @@
                   <a name="LoginWithValidUser">
                   </a> <!-- LoginWithValidUser -->
                   <span class="method-name">LoginWithValidUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NotFillOutPass">
+                  </a> <!-- NotFillOutPass -->
+                  <span class="method-name">NotFillOutPass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NotFillOutUserName">
+                  </a> <!-- NotFillOutUserName -->
+                  <span class="method-name">NotFillOutUserName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NotFillOutUserNameAndPass">
+                  </a> <!-- NotFillOutUserNameAndPass -->
+                  <span class="method-name">NotFillOutUserNameAndPass</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -202,20 +262,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LoginWithValidUser')
 data.setCell(0, 2, 'Tests.LoginTests')
-data.setCell(0, 3, 12457);
+data.setCell(0, 3, 11746);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'LoginWithInValidUser')
+data.setCell(1, 1, 'InValidUserAndPass')
 data.setCell(1, 2, 'Tests.LoginTests')
-data.setCell(1, 3, 11382);
+data.setCell(1, 3, 10756);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'NotFillOutPass')
+data.setCell(2, 2, 'Tests.LoginTests')
+data.setCell(2, 3, 10330);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'NotFillOutUserName')
+data.setCell(3, 2, 'Tests.LoginTests')
+data.setCell(3, 3, 10320);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'InvalidUser')
+data.setCell(4, 2, 'Tests.LoginTests')
+data.setCell(4, 3, 10233);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'InvalidPass')
+data.setCell(5, 2, 'Tests.LoginTests')
+data.setCell(5, 3, 10006);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'NotFillOutUserNameAndPass')
+data.setCell(6, 2, 'Tests.LoginTests')
+data.setCell(6, 3, 9515);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -243,25 +323,93 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">killAllNodeAndStartServer</span>
+                <span class="method-name">KillNode</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">StartServer</span>
-                <span class="method-start">3039 ms</span>
+                <span class="method-name">ReOpenApp</span>
+                <span class="method-start">3032 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginWithInValidUser</span>
-                <span class="method-start">24449 ms</span>
+                <span class="method-name">InValidUserAndPass</span>
+                <span class="method-start">24598 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">StopServer</span>
+                <span class="method-start">35357 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">StartServer</span>
-                <span class="method-start">35834 ms</span>
+                <span class="method-name">ReOpenApp</span>
+                <span class="method-start">35409 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">InvalidPass</span>
+                <span class="method-start">56394 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">StopServer</span>
+                <span class="method-start">66401 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">ReOpenApp</span>
+                <span class="method-start">66453 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">InvalidUser</span>
+                <span class="method-start">87178 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">StopServer</span>
+                <span class="method-start">97412 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">ReOpenApp</span>
+                <span class="method-start">97464 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginWithValidUser</span>
-                <span class="method-start">55060 ms</span>
+                <span class="method-start">118627 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">StopServer</span>
+                <span class="method-start">130374 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">ReOpenApp</span>
+                <span class="method-start">130424 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NotFillOutPass</span>
+                <span class="method-start">151862 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">StopServer</span>
+                <span class="method-start">162192 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">ReOpenApp</span>
+                <span class="method-start">162244 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NotFillOutUserName</span>
+                <span class="method-start">183434 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">StopServer</span>
+                <span class="method-start">193755 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">ReOpenApp</span>
+                <span class="method-start">193806 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NotFillOutUserNameAndPass</span>
+                <span class="method-start">214859 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">StopServer</span>
+                <span class="method-start">224375 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

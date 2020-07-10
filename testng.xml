@@ -5,9 +5,13 @@
 <listener class-name="Resources.Listeners"/>
 <listener class-name="Resources.ExtentReporterNG"/>
 </listeners>
-  <test thread-count="5" name="test">
+  <test thread-count="5" name="Test">
     <classes>
-		<class name="Tests.LoginTests"/>
+		<class name="Tests.LoginTests">
+		<methods>
+		<include name="InCompleteFormat"/>
+		</methods>
+		</class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
