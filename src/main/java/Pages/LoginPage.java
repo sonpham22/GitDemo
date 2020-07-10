@@ -7,15 +7,15 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class Login {
+public class LoginPage {
 	
 	
-	public Login(AndroidDriver<AndroidElement> driver) 
+	public LoginPage(AndroidDriver<AndroidElement> driver) 
 	{
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	public void LoginWithTheUser(String user, String pass)
+	public void Login(String user, String pass)
 	{
 		EmailTextBox().sendKeys(user);
 		PassWordTextBox().sendKeys(pass);

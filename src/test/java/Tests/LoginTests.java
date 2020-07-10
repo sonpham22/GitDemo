@@ -2,13 +2,12 @@ package Tests;
 
 import org.springframework.util.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import Framework.Base;
 import Framework.Utilities;
-import Pages.Login;
+import Pages.LoginPage;
 import Pages.PayNow;
 import java.io.IOException;
 
@@ -24,8 +23,8 @@ public class LoginTests extends Base {
 	@Test
 	public void LoginWithValidUser() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser(userName, passWord);
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(userName, passWord);
 		PayNow payNow = new PayNow(driver);
 		Assert.isTrue(payNow.PayNowOption().isDisplayed(), "There is no Invalid error message");		
 	}
@@ -33,68 +32,68 @@ public class LoginTests extends Base {
 	@Test
 	public void NotFillOutUserNameAndPass() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser("", "");
-		Assert.isTrue(login.InvalidMessage().isDisplayed(), "There is no Invalid error message");
-		Assert.isTrue(login.FillOutEmailMessage().isDisplayed(), "There is no fill out email error message");
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login("", "");
+		Assert.isTrue(loginPage.InvalidMessage().isDisplayed(), "There is no Invalid error message");
+		Assert.isTrue(loginPage.FillOutEmailMessage().isDisplayed(), "There is no fill out email error message");
 	}
 	
 	@Test
 	public void NotFillOutUserName() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser("", passWord);
-		Assert.isTrue(login.InvalidMessage().isDisplayed(), "There is no Invalid error message");
-		Assert.isTrue(login.FillOutEmailMessage().isDisplayed(), "There is no fill out email error message");
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login("", passWord);
+		Assert.isTrue(loginPage.InvalidMessage().isDisplayed(), "There is no Invalid error message");
+		Assert.isTrue(loginPage.FillOutEmailMessage().isDisplayed(), "There is no fill out email error message");
 	}
 	
 	@Test
 	public void NotFillOutPass() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser(userName, "");
-		Assert.isTrue(login.InvalidMessage().isDisplayed(), "There is no Invalid error message");
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(userName, "");
+		Assert.isTrue(loginPage.InvalidMessage().isDisplayed(), "There is no Invalid error message");
 		//Assert.isTrue(login.FillOutPassMessage().isDisplayed(), "There is no fill out pass word error message");
 	}
 	
 	@Test
 	public void InvalidUser() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser(invalidUserName, passWord);
-		Assert.isTrue(login.InvalidMessage().isDisplayed(), "There is no Invalid error message");
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(invalidUserName, passWord);
+		Assert.isTrue(loginPage.InvalidMessage().isDisplayed(), "There is no Invalid error message");
 	}
 	
 	@Test
 	public void InvalidPass() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser(userName, invalidPassWord);
-		Assert.isTrue(login.InvalidMessage().isDisplayed(), "There is no Invalid error message");
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(userName, invalidPassWord);
+		Assert.isTrue(loginPage.InvalidMessage().isDisplayed(), "There is no Invalid error message");
 	}
 	
 	@Test
 	public void InValidUserAndPass() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser(invalidUserName, invalidPassWord);
-		Assert.isTrue(login.InvalidMessage().isDisplayed(), "Login successfully with invalid user");		
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(invalidUserName, invalidPassWord);
+		Assert.isTrue(loginPage.InvalidMessage().isDisplayed(), "Login successfully with invalid user");		
 	}
 	
 	@Test
 	public void InvalidFormat() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser(invalidFormat, passWord);
-		Assert.isTrue(login.InvalidFormat().isDisplayed(), "There is no invalid format error message");		
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(invalidFormat, passWord);
+		Assert.isTrue(loginPage.InvalidFormat().isDisplayed(), "There is no invalid format error message");		
 	}
 	
 	@Test
 	public void InCompleteFormat() throws IOException, InterruptedException
 	{			
-		Login login = new Login(driver);
-		login.LoginWithTheUser(inCompleteFormat, passWord);
-		Assert.isTrue(login.InCompleteFormat().isDisplayed(), "There is no invalid format error message");		
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(inCompleteFormat, passWord);
+		Assert.isTrue(loginPage.InCompleteFormat().isDisplayed(), "There is no invalid format error message");		
 	}
 	
 	@BeforeTest
