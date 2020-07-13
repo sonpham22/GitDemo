@@ -1,6 +1,10 @@
 package Framework;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import Pages.LoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -23,5 +27,16 @@ public class Utilities extends Base{
 	{
 		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));");
 	}
-
+	
+	public void LoginToApp() throws IOException
+	{
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Framework\\Properties");
+		Properties prop = new Properties();
+		prop.load(fis);
+		
+		String userName = (String) prop.get("userName");
+		String passWord = (String) prop.get("passWord");
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(userName, passWord);
+	}
 }

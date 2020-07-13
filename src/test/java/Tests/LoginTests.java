@@ -21,7 +21,7 @@ public class LoginTests extends Base {
 	String inCompleteFormat="inComlidFormat@";
 	
 	@Test
-	public void LoginWithValidUser() throws IOException, InterruptedException
+	public void LoginWithValidUser()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login(userName, passWord);
@@ -30,7 +30,7 @@ public class LoginTests extends Base {
 	}
 	
 	@Test
-	public void NotFillOutUserNameAndPass() throws IOException, InterruptedException
+	public void NotFillOutUserNameAndPass()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login("", "");
@@ -39,7 +39,7 @@ public class LoginTests extends Base {
 	}
 	
 	@Test
-	public void NotFillOutUserName() throws IOException, InterruptedException
+	public void NotFillOutUserName()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login("", passWord);
@@ -48,7 +48,7 @@ public class LoginTests extends Base {
 	}
 	
 	@Test
-	public void NotFillOutPass() throws IOException, InterruptedException
+	public void NotFillOutPass()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login(userName, "");
@@ -57,7 +57,7 @@ public class LoginTests extends Base {
 	}
 	
 	@Test
-	public void InvalidUser() throws IOException, InterruptedException
+	public void InvalidUser()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login(invalidUserName, passWord);
@@ -65,7 +65,7 @@ public class LoginTests extends Base {
 	}
 	
 	@Test
-	public void InvalidPass() throws IOException, InterruptedException
+	public void InvalidPass()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login(userName, invalidPassWord);
@@ -73,7 +73,7 @@ public class LoginTests extends Base {
 	}
 	
 	@Test
-	public void InValidUserAndPass() throws IOException, InterruptedException
+	public void InValidUserAndPass()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login(invalidUserName, invalidPassWord);
@@ -81,7 +81,7 @@ public class LoginTests extends Base {
 	}
 	
 	@Test
-	public void InvalidFormat() throws IOException, InterruptedException
+	public void InvalidFormat()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login(invalidFormat, passWord);
@@ -89,7 +89,7 @@ public class LoginTests extends Base {
 	}
 	
 	@Test
-	public void InCompleteFormat() throws IOException, InterruptedException
+	public void InCompleteFormat()
 	{			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login(inCompleteFormat, passWord);
@@ -112,7 +112,7 @@ public class LoginTests extends Base {
 	}
 	
 	@AfterMethod
-	public void StopServer() throws IOException, InterruptedException
+	public void StopServer()
 	{
 		service.stop();
 	}
