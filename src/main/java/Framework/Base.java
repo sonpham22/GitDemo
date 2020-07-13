@@ -17,7 +17,6 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 public class Base {
 	
 	public static AndroidDriver<AndroidElement> driver;
-	
 	public static AppiumDriverLocalService service;
 	
 	public AppiumDriverLocalService startServer()
@@ -59,15 +58,10 @@ public class Base {
 
 	public static AndroidDriver<AndroidElement> Capabilities(String appName) throws IOException, InterruptedException
 	{
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Framework\\Properties");
-		Properties prop = new Properties();
-		prop.load(fis);
-		
+		Utilities utilities = new Utilities(driver);
 		File f = new File("src");
-		File fs = new File(f, (String) prop.getProperty(appName));
-		
+		File fs = new File(f, utilities.GetParam(appName));
 		DesiredCapabilities cap = new DesiredCapabilities();
-		
 		//String device = (String) prop.get("device");
 		String device = System.getProperty("deviceName");
 		if (device.contains("SON-PHONE"))
@@ -79,7 +73,6 @@ public class Base {
 		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 14);
 		cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-		
 		return driver;
 	}
 	

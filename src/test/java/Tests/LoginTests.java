@@ -96,6 +96,13 @@ public class LoginTests extends Base {
 		Assert.isTrue(loginPage.InCompleteFormat().isDisplayed(), "There is no invalid format error message");		
 	}
 	
+	@Test
+	public void LoginDemo() throws IOException
+	{			
+		Utilities utilities = new Utilities(driver);
+		utilities.LoginToApp();		
+	}
+	
 	@BeforeTest
 	public void KillNode() throws IOException, InterruptedException
 	{
