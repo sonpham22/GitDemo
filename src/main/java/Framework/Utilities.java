@@ -27,7 +27,7 @@ public class Utilities extends Base{
 	public void SetupDriver() throws IOException, InterruptedException
 	{
 		AndroidDriver<AndroidElement> driver = Capabilities("PayPenseApp");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 		
 	public void scrollToText(String text)
