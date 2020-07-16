@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
-import Pages.AppLoginPage;
-import Pages.PortalLoginPage;
+import AppPages.AppLoginPage;
+import PortalPages.PortalLoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
