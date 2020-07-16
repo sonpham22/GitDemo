@@ -3,13 +3,26 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import Pages.LoginPage;
+import org.openqa.selenium.WebDriver;
+import Pages.AppLoginPage;
+import Pages.PortalLoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 public class Utilities extends Base{
 	
-	AndroidDriver<AndroidElement> driver;
+	WebDriver webDriver;
+	AndroidDriver<AndroidElement> androidDriver;
+	
+	public Utilities(WebDriver webDriver)
+	{
+		this.webDriver = webDriver;
+	}
+	
+	public Utilities(AndroidDriver<AndroidElement> androidDriver)
+	{
+		this.androidDriver = androidDriver;
+	}
 	
 	public String GetParam(String name) throws IOException
 	{
@@ -19,25 +32,33 @@ public class Utilities extends Base{
 		return prop.getProperty(name);
 	}
 	
-	public Utilities(AndroidDriver<AndroidElement> driver)
+	public void GetAndroiddDriver() throws IOException, InterruptedException
 	{
-		this.driver = driver;
+		AndroidDriver<AndroidElement> androidDriver = AndroidCapabilities("PayPenseApp");
+		androidDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	
-	public void SetupDriver() throws IOException, InterruptedException
+	public void GetWebDriver()
 	{
-		AndroidDriver<AndroidElement> driver = Capabilities("PayPenseApp");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		webDriver = WebCapabilities();
+		webDriver.get("http://ntc.travel2pay.com/");
+		webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 		
 	public void scrollToText(String text)
 	{
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));");
+		androidDriver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));");
 	}
 	
 	public void LoginToApp() throws IOException
 	{	
-		LoginPage loginPage = new LoginPage(driver);
-		loginPage.Login(GetParam("userName"), GetParam("passWord"));
+		AppLoginPage appLoginPage = new AppLoginPage(androidDriver);
+		appLoginPage.Login(GetParam("userName"), GetParam("passWord"));
+	}
+	
+	public void LoginToPortal() throws IOException
+	{	
+		PortalLoginPage portalLoginPage = new PortalLoginPage(webDriver);
+		portalLoginPage.Login(GetParam("userName"), GetParam("passWord"));
 	}
 }
